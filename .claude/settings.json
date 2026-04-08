@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(CI=1 npx expo start)",
+      "Bash(kill %1)"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "SGE Assinatura",
+    "slug": "sge-assinatura",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "sge-assinatura",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1565C0"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "br.com.sge.assinatura"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1565C0"
+      },
+      "package": "br.com.sge.assinatura"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "hubUrl": "https://SEU-SERVIDOR/hubs/signature"
+    },
+    "plugins": []
+  }
+}
