@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Alert, SafeAreaView, StyleSheet } from 'react-native';
+import { Alert, StyleSheet } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { SignaturePad } from './src/components/SignaturePad';
 import { WaitingScreen } from './src/components/WaitingScreen';
 import { useSignalR } from './src/hooks/useSignalR';
@@ -27,18 +28,20 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={styles.safe}>
-      <StatusBar style="light" backgroundColor="#1565C0" />
-      {payload ? (
-        <SignaturePad
-          payload={payload}
-          onConfirm={handleConfirm}
-          onCancel={handleCancel}
-        />
-      ) : (
-        <WaitingScreen status={status} />
-      )}
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.safe}>
+        <StatusBar style="light" backgroundColor="#1565C0" />
+        {payload ? (
+          <SignaturePad
+            payload={payload}
+            onConfirm={handleConfirm}
+            onCancel={handleCancel}
+          />
+        ) : (
+          <WaitingScreen status={status} />
+        )}
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 

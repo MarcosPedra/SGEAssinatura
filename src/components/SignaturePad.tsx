@@ -81,6 +81,7 @@ export function SignaturePad({ payload, onConfirm, onCancel }: SignaturePadProps
         type: payload.type,
         referenceId: isWithdrawal(payload) ? payload.purchaseId : payload.batchReceiptId,
         signatureBase64: base64,
+        sessionId: payload.sessionId,
       };
       await onConfirm(result);
     } catch {

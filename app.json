@@ -20,14 +20,18 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1565C0"
       },
-      "package": "br.com.sge.assinatura"
+      "package": "br.com.sge.assinatura",
+      "usesCleartextTraffic": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "hubUrl": "https://SEU-SERVIDOR/hubs/signature"
+      "hubUrl": "http://192.168.0.14:5108/hubs/signature",
+      "hubApiKey": "eozFjMx6RbZOp537QRoAr6NvLg1j3JPbytel9nXcno=",
+      "deviceSessionId": "499d9505-5b01-4af2-8786-5cfb871422b9"
+
     },
     "plugins": []
-  }
+  }  
 }
